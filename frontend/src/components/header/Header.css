@@ -1,0 +1,86 @@
+.header{
+    margin-left: 40px;
+    margin-top:  60px; ;
+    height: 500px;
+    width: 500px;
+    background-color: beige;
+    align-items: center; 
+    text-align: center;
+    
+}
+.header h1 {
+    font-size: 2rem;
+    color: #2E3A59;
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+
+.header-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-loc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+  }
+  .header-loc{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .header-class{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+ 
+    border-radius: 2px;
+  }
+ 
+  .header-loc input, .header-date input, .header-class input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+  }
+  
+  .header-loc .loc-items, .header-loc .loc-items2, .header-date .header-class {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-loc .header-icon, .header-date .header-icon {
+    color: #2E3A59;
+  }
+  
+  .header-loc input::placeholder, .header-date input::placeholder {
+    color: #A0A0A0;
+  }
+  
+  .headerbtn {
+    margin-top: 120px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .headerbtn:hover {
+    background-color: #E69500;
+  }
+ 
