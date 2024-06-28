@@ -1,0 +1,33 @@
+.navbar{
+    height: 60px;
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navcontainer{
+    width: 100%;
+    max-width: 1024px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navcontainer img{
+    height: 20px;
+    width: 20px;
+  }
+  .logo{
+    color: white;
+    font-weight: 700;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .navbutton{
+    margin-left: 30px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+  }
