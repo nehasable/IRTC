@@ -11,7 +11,7 @@ const List = () => {
 
   const  handleSearch = async() => {
   const data=await   axios.get(`http://localhost:8000/trains?from=${departureStation}&to=${arrivalStation}`)
-  setName[data.data];
+  setName(data.data);
   console.log(data.data)
   
   };
