@@ -46,7 +46,7 @@ export const createTrain = async (req, res, next) => {
 
     try {
       const trains = await Trains.find();
-      res.status(200).json(trains);                      //no parameter
+      res.status(200).json(trains);                     
     } catch (err) {
       next(err);
     }

@@ -1,30 +1,30 @@
 import React from 'react'
 import "./Trains.css"
-const Trains = () => {
+const Trains = ({item}) => {
   return (
     <>
       <div className="train">
         <div className="train-container">
             
-            <h3 className='heading'>CHENNAI EXPRESS</h3>
+            <h3 className='heading'>{item.trainName}</h3>
             <div className="train-time">
                 <div className="dept">
-                <span>21:30 </span>
+                <span>{item.departureTime} </span>
                 <span>|</span>
 
-            <span>CSMT - Chattrapati Shivaji Maharaj Terminal</span>
+            <span>{departureStation}</span>
                 </div>
            <div className="arr">
-           <span>13:30 </span>
+           <span>{arrivalTime} </span>
             <span>|</span>
-            <span>CHENNAI - MTR</span>
+            <span>departureStation</span>
             </div> 
             
             </div>
             <div className="train-class">
-                <span>Sleeper (S)</span>
-                <span>AC 2 Tier (2A)</span>
-                <span>First Class (F)</span>
+            <span>Sleeper: {item.classes.sleeper ? 'Available' : 'Not Available'}</span>
+          <span>AC 2 Tier: {item.classes.ac2Tier ? 'Available' : 'Not Available'}</span>
+          <span>First Class: {item.classes.firstClass ? 'Available' : 'Not Available'}</span>
             </div>
             
             

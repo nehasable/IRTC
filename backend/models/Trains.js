@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 // import { Schema } from "mongoose";
 
 const TrainSchema=new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
-    },
     trainName: {
         type: String,
         required: true,
@@ -46,4 +42,4 @@ const TrainSchema=new mongoose.Schema({
 
 
 })
-export default mongoose.model("Train",TrainSchema)         //model,schema
+export default mongoose.model("Trains",TrainSchema)         //model,schema
