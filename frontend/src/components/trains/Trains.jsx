@@ -12,12 +12,12 @@ const Trains = ({item}) => {
                 <span>{item.departureTime} </span>
                 <span>|</span>
 
-            <span>{departureStation}</span>
+            <span>{item.departureStation}</span>
                 </div>
            <div className="arr">
-           <span>{arrivalTime} </span>
+           <span>{item.arrivalTime} </span>
             <span>|</span>
-            <span>departureStation</span>
+            <span>{item.arrivalStation}</span>
             </div> 
             
             </div>
