@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import { createError } from "../verify/error.js";
 
 export const verifyToken = (req, res, next) => {
-   const token = req.cookies.access_token;                        //access token
+   const token = req.headers["acess_token"];                        //access token
   if (!token) {
     return next(createError(401, "You are not authenticated!"));
   }
@@ -26,11 +26,12 @@ export const verifyUser = (req, res, next) => {                                 
 
 
 export const verifyAdmin = (req, res, next) => {                                 //verufy if admin
-             verifyToken(req, res, next, () => {
-    if (req.user.isAdmin) {
+  console.log(req.user.isAdmin)
+    if (!req.user.isAdmin ==true) {
+      
       next();
-    } else {
-         return next(createError(403, "You are not authorized!"));
-    }
-  });
-};
+    // } else {
+    //      return next(createError(403, "You are not authorized!"));
+    // }
+  };
+}

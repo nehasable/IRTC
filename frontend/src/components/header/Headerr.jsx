@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker";
 import {useState} from 'react'
 import "react-datepicker/dist/react-datepicker.css";
 import { BsFillCalendarDateFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
@@ -63,7 +64,7 @@ const Header = () => {
             <option value="second class">First Class (F)</option>
           </select>
         </div>
-        <button className="headerbtn">Search</button>
+   <Link to="/trains">   <button className="headerbtn">Search</button></Link> 
       </form>
     </div>
   );

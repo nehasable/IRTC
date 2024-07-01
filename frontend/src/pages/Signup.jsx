@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Signup.css"; // Import the CSS file
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -27,7 +29,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h2>Signup</h2>
       <input
         type="text"
@@ -45,7 +47,7 @@ const Signup = () => {
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
-      <button onClick={handleSignup}>Signup</button>
+     <Link to="/"><button onClick={handleSignup}>Signup</button></Link> 
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
     </div>

@@ -50,7 +50,8 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { createError } from "../verify/error.js";
-
+import { config } from "dotenv";
+config()
 // Register a new user
 export const register = async (req, res, next) => {
   try {
@@ -71,6 +72,7 @@ export const register = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
+console.log( process.env.JWT)
     if (!user) return next(createError(404, "User not found!"));
     console.log(req.body);
     const isPasswordCorrect = await bcrypt.compare(
@@ -82,7 +84,8 @@ export const login = async (req, res, next) => {
 
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin }, // Generate JWT token
-      process.env.JWT_SECRET,
+      process.env.JWT,
+
       { expiresIn: "1h" } // Token expiration time
     );
 

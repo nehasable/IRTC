@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Trains from '../components/trains/Trains'
 import useFetch from '../custom hook/useFetch'
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const List = () => {
   const [departureStation, setDepartureStation] = useState('');
@@ -31,7 +32,7 @@ const List = () => {
           value={arrivalStation}
           onChange={(e) => setArrivalStation(e.target.value)}
         />
-        <button onClick={handleSearch}>Search</button>
+       <button onClick={handleSearch}>Search</button>
       </div>
       {/* <div className="list-results">
         {loading && <p>Loading...</p>}
